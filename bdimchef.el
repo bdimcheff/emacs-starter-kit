@@ -33,8 +33,8 @@
 (require 'haml-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 
-;;(require 'sass-mode)
-;;(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
+(require 'sass-mode)
+(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 
 ;;(load "haskell-mode/haskell-site-file")
 
@@ -74,8 +74,11 @@
   (open-line 1)
   (next-line 1)
   (yank)
-)
+  )
+
+;; global keys
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
+(global-set-key "\C-m" 'newline-and-indent)
 
 (if (eq window-system 'mac)
     (load-file (concat dotfiles-dir "bdimchef-mac.el"))
