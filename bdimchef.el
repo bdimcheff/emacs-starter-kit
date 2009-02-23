@@ -23,6 +23,8 @@
 (require 'linum)
 (global-linum-mode 1)
 
+(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+
 ;; Major Modes
 (require 'textile-mode)
 (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
