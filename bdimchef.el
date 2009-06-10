@@ -38,6 +38,16 @@
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 
+;; Cucumber
+(add-to-list 'load-path "~/.emacs.d/vendor/cucumber.el")
+;;(load "cucumber-mode")
+(require 'cucumber-mode)
+
+;; load bundle snippets
+(yas/load-directory "~/.emacs.d/vendor/cucumber.el/snippets")
+
+(add-to-list 'auto-mode-alist '("\\.feature" . feature-mode))
+
 (require 'erlang-start)
 
 ;;(load "haskell-mode/haskell-site-file")
