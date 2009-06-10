@@ -48,10 +48,10 @@
 ;; window positioning
 (split-window-horizontally)   ;; want two windows at startup 
 (other-window 1)              ;; move to other window
-(split-window-vertically)
-(other-window 1)
-(shell)                       ;; start a shell
-(rename-buffer "shell-first") ;; rename it
-(other-window 1)              ;; move back to first window 
+;; (split-window-vertically)
+;; (other-window 1)
+;; (shell)                       ;; start a shell
+;; (rename-buffer "shell-first") ;; rename it
+;; (other-window 1)              ;; move back to first window 
 
 (toggle-fullscreen)
