@@ -11,6 +11,10 @@
 ;; Commands
 ;;(require 'unbound)
 
+;; Ack
+(add-to-list 'load-path "~/.emacs.d/vendor/ack.el")
+(require 'ack)
+
 
 ;; Keyboard
 ;;(require 'mac-bindings)
