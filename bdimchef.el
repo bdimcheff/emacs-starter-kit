@@ -43,12 +43,12 @@
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 
 ;; Cucumber
-(add-to-list 'load-path "~/.emacs.d/vendor/cucumber.el")
+(add-to-list 'load-path "~/.emacs.d/vendor/cucumber")
 ;;(load "cucumber-mode")
-(require 'cucumber-mode)
+(require 'feature-mode)
 
 ;; load bundle snippets
-(yas/load-directory "~/.emacs.d/vendor/cucumber.el/snippets")
+(yas/load-directory "~/.emacs.d/vendor/cucumber/snippets")
 
 (add-to-list 'auto-mode-alist '("\\.feature" . feature-mode))
 
