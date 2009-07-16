@@ -100,8 +100,23 @@
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
 (global-set-key "\C-m" 'newline-and-indent)
 
+;; screen layout
+(defun toggle-fullscreen () 
+  (interactive) 
+  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen) 
+                                           nil 
+                                         'fullboth)))
+
+;; window positioning
+(split-window-horizontally)   ;; want two windows at startup 
+(other-window 1)              ;; move to other window
+
 (if (eq window-system 'mac)
     (load-file (concat dotfiles-dir "bdimchef-mac.el"))
+)
+
+(if (eq window-system 'x)
+    (load-file (concat dotfiles-dir "bdimchef-x.el"))
 )
 
 (provide 'bdimchef)

@@ -1,10 +1,5 @@
 (server-start)
 
-(defun toggle-fullscreen () 
-  (interactive) 
-  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen) 
-                                           nil 
-                                           'fullboth)))
 (global-set-key [(meta return)] 'toggle-fullscreen) 
 
 ;; path setup
@@ -45,9 +40,6 @@
 ;;(setenv "PATH" (concat "/usr/local/erlware/bin:/opt/local/lib/mysql5/bin:/opt/local/lib/postgresql82/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin" ":" (getenv "PATH"))) 
 
 
-;; window positioning
-(split-window-horizontally)   ;; want two windows at startup 
-(other-window 1)              ;; move to other window
 ;; (split-window-vertically)
 ;; (other-window 1)
 ;; (shell)                       ;; start a shell
