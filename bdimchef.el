@@ -47,6 +47,10 @@
 ;;(load "cucumber-mode")
 (require 'feature-mode)
 
+
+;; Javascript
+(setq espresso-indent-level 4)
+
 ;; load bundle snippets
 (yas/load-directory "~/.emacs.d/vendor/cucumber/snippets")
 
