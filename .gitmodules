@@ -1,3 +1,6 @@
 [submodule "vendor/cucumber"]
 	path = vendor/cucumber
 	url = git://github.com/michaelklishin/cucumber.el.git
+[submodule "vendor/yasnippet/snippets/text-mode/ruby-mode"]
+	path = vendor/yasnippet/snippets/text-mode/ruby-mode
+	url = git://github.com/Chrononaut/yasnippet-ruby-mode.git
