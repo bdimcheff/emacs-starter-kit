@@ -12,6 +12,9 @@
 ;;fix problem with ruby-electric and snippet expansion
 (add-hook 'ruby-mode-hook (lambda () (define-key ruby-mode-map (kbd "TAB") nil)))
 
+;; ruby mode
+(add-hook 'ruby-mode-hook 'esk-paredit-nonlisp)
+
 ;; Commands
 ;;(require 'unbound)
 
