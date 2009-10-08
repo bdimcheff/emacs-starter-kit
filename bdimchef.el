@@ -5,8 +5,12 @@
 ;; Snippets
 (add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
 (require 'yasnippet)
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
+(setq yas/root-directory "~/.emacs.d/vendor/yasnippet/snippets")
+(yas/load-directory yas/root-directory)
+(yas/global-mode)
+
+;;fix problem with ruby-electric and snippet expansion
+(add-hook 'ruby-mode-hook (lambda () (define-key ruby-mode-map (kbd "TAB") nil)))
 
 ;; Commands
 ;;(require 'unbound)
@@ -27,7 +31,7 @@
 (require 'linum)
 (global-linum-mode 1)
 
-(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+;; (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
 ;; Major Modes
 (require 'textile-mode)
