@@ -14,6 +14,9 @@
 
 ;; ruby mode
 (add-hook 'ruby-mode-hook 'esk-paredit-nonlisp)
+(eval-after-load 'ruby-mode
+  '(progn (define-key ruby-mode-map "{" 'paredit-open-curly)
+          (define-key ruby-mode-map "}" 'paredit-close-curly)))
 
 ;; Commands
 ;;(require 'unbound)
