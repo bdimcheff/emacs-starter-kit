@@ -50,3 +50,5 @@
 (set-default-font "-apple-inconsolata-medium-r-normal--14-140-72-72-m-140-iso10646-1")
 
 (toggle-fullscreen)
+
+(setq mac-command-modifier 'meta)

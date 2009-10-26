@@ -125,7 +125,7 @@
 (split-window-horizontally)   ;; want two windows at startup 
 (other-window 1)              ;; move to other window
 
-(if (eq window-system 'mac)
+(if (or (eq window-system 'mac) (eq window-system 'ns))
     (load-file (concat dotfiles-dir "bdimchef-mac.el"))
 )
 
